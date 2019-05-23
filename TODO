@@ -1,0 +1,5 @@
+ - general code clean-up
+ - review unit tests
+ - add more unit tests
+ - don't depend on CWD while doing file operations
+ - bootstrapping 8sync should be moved to the IRC library
