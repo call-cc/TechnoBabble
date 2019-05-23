@@ -1,0 +1,16 @@
+it's just that in C++ and the like, you don't trust anybody, and in CLOS you basically trust everybody. The practical result is that thieves and bums use C++ and nice people use CLOS.
+Gotos aren't damnable to begin with. If you aren't smart enough to distinguish what's bad about some gotos from all gotos, goto hell.
+A little knowledge is a dangerous thing. I regret that this isn't fatal.
+I have long since given up dealing with people who hold idiotic opinions as if they had arrived at them through thinking about them.
+Life is too long to know C++ well.
+They don't make poles long enough for me want to touch Microsoft products, and I don't want any mass-marketed game-playing device or Windows appliance near my desk or on my network. This is my workbench, dammit, it's not a pretty box to impress people with graphics and sounds. When I work at this system up to 12 hours a day, I'm profoundly uninterested in what user interface a novice user would prefer.
+Would you buy a book proudly stating on the cover that its reader is a dummy? Or would you think "of course it's ironic"?
+The novice-friendly software is more like a misbehaving dog: it shits on the floor, it destroys things, and stinks - the novice-friendly software embodies the opposite of what computer people have dreamed of for decades: artificial stupidity. It's more human.
+Getting C programmers to understand that they cause the computer to do less than minimum is intractable. … Ask him why he thinks he should be able to get away with unsafe code, core dumps, viruses, buffer overruns, undetected errors, etc., just because he wants speed.
+If you are concerned about netiquette, you are either concerned about your own and follow good netiquette, or you are concerned about others and violate good netiquette by bothering people with your concern, as the only netiquette you can actually affect is your own.
+Structure is _nothing_ if it is all you got. Skeletons _spook_ people if they try to walk around on their own. I really wonder why XML does not.
+Sufficiently advanced political correctness is indistinguishable from irony.
+C++ is a language strongly optimized for liars and people who go by guesswork and ignorance.
+C is not clean -- the language has _many_ gotchas and traps, and although its semantics are _simple_ in some sense, it is not any cleaner than the assembly-language design it is based on.
+C being what it is lacks support for multiple return values, so the notion that it is meaningful to pass pointers to memory objects into which any random function may write random values without having a clue where they point, has _not_ been debunked as the sheer idiocy it really is
+The ultimate laziness is not using Perl. That saves you so much work you wouldn't believe it if you had never tried it.

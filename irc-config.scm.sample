@@ -1,0 +1,5 @@
+((nick . "SchemeBot")
+ (realname . "Scheme Bot")
+ (ident . "scheme")
+ (server . "chat.freenode.net")
+ (channels . ("#schemebot")))
