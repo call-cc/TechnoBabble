@@ -23,7 +23,7 @@
 
 (define-class <ii> (<irc>))
 
-(define-method (irc-privmsg (irc <irc>) message params)
+(define-method (event:privmsg (irc <irc>) message params)
   (let ((to (caadr params))
         (from (get-nick (car params)))
         (text (cadadr params)))
