@@ -3,7 +3,7 @@
   #:use-module (technobabble common)
   #:use-module (ix irc))
 
-(define *quote-file* "plugins/naggum.txt")
+(define *quote-file* "technobabble/plugins/naggum.txt")
 
 (set! *random-state* (random-state-from-platform))
 

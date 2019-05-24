@@ -3,7 +3,7 @@
   #:use-module (technobabble common)
   #:use-module (ix irc))
 
-(define *bofh-file* "plugins/bofh-excuses.txt")
+(define *bofh-file* "technobabble/plugins/bofh-excuses.txt")
 
 (set! *random-state* (random-state-from-platform))
 
