@@ -27,12 +27,6 @@
   (let ((to (caadr params))
         (from (get-nick (car params)))
         (text (cadadr params)))
-    (display to)
-    (newline)
-    (display from)
-    (newline)
-    (display text)
-    (newline)
     (dispatch irc from to text)))
 
 (define (load-plugins)
