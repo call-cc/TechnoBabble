@@ -3,3 +3,4 @@
  - add more unit tests
  - don't depend on CWD while doing file operations
  - bootstrapping 8sync should be moved to the IRC library
+ - the bot should be rewritten for 8sync, so we don't duplicate IRC functions in ix-irc
