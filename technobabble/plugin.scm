@@ -32,7 +32,9 @@
             *plugins*))
 
 (define (get-plugins)
-  (delete 'guile-user
-          (map (lambda (p)
-                 (car p))
-               *plugins*)))
+  (string-join
+   (map symbol->string
+        (delete 'guile-user
+                (map (lambda (p)
+                       (car p))
+                     *plugins*)))))
