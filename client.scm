@@ -1,7 +1,6 @@
 (use-modules (oop goops)
              (ix irc)
              (technobabble plugin)
-             (ice-9 ftw)
              (8sync))
 
 (define *config-file* "irc-config.scm")
@@ -28,14 +27,6 @@
         (from (get-nick (car params)))
         (text (cadadr params)))
     (dispatch irc from to text)))
-
-(define (load-plugins)
-  (let* ((dir "technobabble/plugins/")
-         (files (scandir dir
-                         (lambda (f) (string-suffix? ".scm" f)))))
-    (for-each (lambda (f)
-                (load (string-append dir f)))
-              files)))
 
 (define* (run-irc #:key (username (get-cfg 'nick))
                   (nick (get-cfg 'nick))
