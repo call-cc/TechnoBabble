@@ -1,8 +1,7 @@
 (define-module (technobabble plugins rpn)
   #:use-module (technobabble plugin)
   #:use-module (ix irc)
-  #:use-module (ice-9 regex)
-  #:use-module (ice-9 format))
+  #:use-module (ice-9 regex))
 
 (define *rpn-stack* '())
 
@@ -61,7 +60,9 @@
   (set! *rpn-stack* '())
   (let* ((exp (get-rpn-exp text))
          (result (eval-rpn exp))
-         (text (format #f "~a" result)))
+         (text (if result
+                   (number->string result)
+                   "Invalid expression.")))
     (irc-msg irc to text)))
 
 (add-plugin "!calc .+" rpn-calc)
