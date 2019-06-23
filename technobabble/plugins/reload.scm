@@ -5,7 +5,7 @@
 
 (define (load-plugins)
   (clear-plugins)
-  (let ((files (scandir "plugins/"
+  (let ((files (scandir "technobabble/plugins/"
                         (lambda (f) (string-suffix? ".scm" f)))))
     (for-each (lambda (f)
                 (load f))
