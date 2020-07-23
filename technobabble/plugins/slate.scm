@@ -39,6 +39,14 @@
          (slate-final (alist-delete key slate string-ci=?)))
     (write-slate *slate-file* slate-final)))
 
+(define (search-fact term accessor)
+  (let ((slate (read-slate *slate-file*)))
+    (map car
+         (filter (lambda (item)
+                   (string-contains-ci (accessor item)
+                                       term))
+                 slate))))
+
 (add-plugin "^!\\? .+"
             (lambda (irc from to text)
               (let* ((key (parse-key text))
@@ -49,12 +57,27 @@
                                  from)))
                 (irc-msg irc target answer))))
 
+(define (add-plugin-slate-helper regexp accessor)
+  (add-plugin regexp
+              (lambda (irc from to text)
+                (let* ((term (parse-key text))
+                       (hits (search-fact term accessor))
+                       (answer (format #f "Your results for '~a': ~a" term hits))
+                       (target (if (is-target-channel? to)
+                                   to
+                                   from)))
+                  (irc-msg irc target answer)))))
+
+(add-plugin-slate-helper "^!\\?\\? .+" car)
+
+(add-plugin-slate-helper "^!\\?\\?\\? .+" cdr)
+
 (add-plugin "^!- .+"
             (lambda (irc from to text)
               (let ((key (parse-key text))
                     (target (if (is-target-channel? to)
-                                 to
-                                 from)))
+                                to
+                                from)))
                 (delete-fact key)
                 (irc-msg irc target "Fact deleted."))))
 
