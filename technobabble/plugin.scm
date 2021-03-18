@@ -1,6 +1,7 @@
 (define-module (technobabble plugin)
   #:use-module (ice-9 regex)
   #:use-module (ice-9 ftw)
+  #:use-module (srfi srfi-1)
   #:export (clear-plugins
             load-plugins
             add-plugin
@@ -34,7 +35,8 @@
 (define (get-plugins)
   (string-join
    (map symbol->string
-        (delete 'guile-user
-                (map (lambda (p)
-                       (car p))
-                     *plugins*)))))
+        (delete-duplicates
+         (delete 'guile-user
+                 (map (lambda (p)
+                        (car p))
+                      *plugins*))))))
